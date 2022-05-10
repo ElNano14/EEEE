@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include "QSettings"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -29,5 +29,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     int licznik;
+    QSettings *Settings;
+    int rekord;
 };
 #endif // MAINWINDOW_H

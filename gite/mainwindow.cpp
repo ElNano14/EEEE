@@ -7,7 +7,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    Settings = new QSettings("Ozo i bartek", "clicker");
     licznik =0;
+    rekord = Settings->value("Licznik/rekord",0).toInt();
+    ui->label_3->setText(QString::number(rekord));
 }
 
 MainWindow::~MainWindow()
@@ -25,6 +28,12 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     ui->label->setText(QString::number(++licznik));
+
+    if(rekord< licznik){
+        rekord=licznik;
+        Settings->setValue("Licznik/rekord", rekord);
+        ui->label_3->setText(QString::number(rekord));
+    }
 }
 
 
