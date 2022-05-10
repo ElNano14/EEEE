@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    licznik =0;
 }
 
 MainWindow::~MainWindow()
@@ -17,5 +18,11 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     close();
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    ui->label->setText(QString::number(++licznik));
 }
 
