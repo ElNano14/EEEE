@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "QMessageBox"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -24,5 +25,23 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::on_pushButton_2_clicked()
 {
     ui->label->setText(QString::number(++licznik));
+}
+
+
+void MainWindow::on_actionZamknij_triggered()
+{
+    close();
+}
+
+
+void MainWindow::on_actionPomoc_triggered()
+{
+    QMessageBox::aboutQt(this, "E");
+}
+
+
+void MainWindow::on_actionPomoc_2_triggered()
+{
+    QMessageBox::information(this, "E", "MEGA POMOC EEEEEEEEEEE");
 }
 

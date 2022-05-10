@@ -66,8 +66,33 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPlik">
+    <property name="title">
+     <string>Plik</string>
+    </property>
+    <addaction name="actionZamknij"/>
+    <addaction name="separator"/>
+    <addaction name="actionPomoc"/>
+    <addaction name="actionPomoc_2"/>
+   </widget>
+   <addaction name="menuPlik"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionZamknij">
+   <property name="text">
+    <string>Zamknij</string>
+   </property>
+  </action>
+  <action name="actionPomoc">
+   <property name="text">
+    <string>O Qt</string>
+   </property>
+  </action>
+  <action name="actionPomoc_2">
+   <property name="text">
+    <string>Pomoc</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

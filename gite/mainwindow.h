@@ -20,6 +20,12 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_actionZamknij_triggered();
+
+    void on_actionPomoc_triggered();
+
+    void on_actionPomoc_2_triggered();
+
 private:
     Ui::MainWindow *ui;
     int licznik;
